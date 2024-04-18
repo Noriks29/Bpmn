@@ -1,0 +1,2235 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ctss="change me 1" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://sourceforge.net/bpmn/definitions/_1683018000277" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" exporter="Yaoqiang BPMN Editor" exporterVersion="5.3" expressionLanguage="http://www.w3.org/1999/XPath" id="_1683018000277" name="" targetNamespace="http://sourceforge.net/bpmn/definitions/_1683018000277" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+  <process id="PROCESS_1" isClosed="false" isExecutable="true" processType="None">
+    <extensionElements>
+      <yaoqiang:description/>
+      <yaoqiang:pageFormat height="841.8897637795276" imageableHeight="831.8897637795276" imageableWidth="588.1102362204724" imageableX="5.0" imageableY="5.0" orientation="0" width="598.1102362204724"/>
+      <yaoqiang:page background="#FFFFFF" horizontalCount="5" verticalCount="3"/>
+    </extensionElements>
+    <exclusiveGateway gatewayDirection="Converging" id="_105" name="Exclusive Gateway">
+      <extensionElements>
+        <yaoqiang:label offset-x="3.0" offset-y="55.0"/>
+      </extensionElements>
+      <incoming>_109</incoming>
+      <incoming>_108</incoming>
+      <incoming>_107</incoming>
+      <outgoing>_24</outgoing>
+    </exclusiveGateway>
+    <exclusiveGateway gatewayDirection="Converging" id="_90" name="Exclusive Gateway">
+      <extensionElements>
+        <yaoqiang:label offset-x="3.0" offset-y="55.0"/>
+      </extensionElements>
+      <incoming>_96</incoming>
+      <incoming>_316</incoming>
+      <incoming>_317</incoming>
+      <incoming>_318</incoming>
+      <outgoing>_320</outgoing>
+      <outgoing>_321</outgoing>
+    </exclusiveGateway>
+    <task completionQuantity="2" id="_84" isForCompensation="false" name="Без внесения консерванта (a1,10)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_16</incoming>
+      <outgoing>_96</outgoing>
+    </task>
+    <exclusiveGateway gatewayDirection="Converging" id="_77" name="Exclusive Gateway">
+      <extensionElements>
+        <yaoqiang:label offset-x="3.0" offset-y="55.0"/>
+      </extensionElements>
+      <incoming>_285</incoming>
+      <incoming>_301</incoming>
+      <incoming>_304</incoming>
+      <incoming>_315</incoming>
+      <incoming>_39</incoming>
+      <incoming>_40</incoming>
+      <incoming>_41</incoming>
+      <incoming>_69</incoming>
+      <incoming>_70</incoming>
+      <outgoing>_16</outgoing>
+      <outgoing>_17</outgoing>
+      <outgoing>_18</outgoing>
+      <outgoing>_19</outgoing>
+    </exclusiveGateway>
+    <exclusiveGateway gatewayDirection="Diverging" id="_59" name="Exclusive Gateway">
+      <extensionElements>
+        <yaoqiang:label offset-x="3.0" offset-y="55.0"/>
+      </extensionElements>
+      <incoming>_60</incoming>
+      <outgoing>_64</outgoing>
+      <outgoing>_63</outgoing>
+      <outgoing>_62</outgoing>
+      <outgoing>_61</outgoing>
+    </exclusiveGateway>
+    <task completionQuantity="2" id="_295" isForCompensation="false" name="Заполнение рукава (a1,18)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_116</incoming>
+      <outgoing>_109</outgoing>
+    </task>
+    <task completionQuantity="2" id="_294" isForCompensation="false" name="Заполнение башни (a1,17)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_115</incoming>
+      <outgoing>_108</outgoing>
+    </task>
+    <task completionQuantity="2" id="_293" isForCompensation="false" name="Заполнение траншеи (a1,16)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_114</incoming>
+      <outgoing>_107</outgoing>
+    </task>
+    <task completionQuantity="2" id="_292" isForCompensation="false" name="Транспортировка тракторная (a1,14)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_320</incoming>
+      <outgoing>_113</outgoing>
+    </task>
+    <task completionQuantity="2" id="_291" isForCompensation="false" name="Транспортировка автомобильная (a1,15)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_321</incoming>
+      <outgoing>_319</outgoing>
+    </task>
+    <task completionQuantity="2" id="_277" isForCompensation="false" name="Внесение электрохимического раствора (a1,13)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_19</incoming>
+      <outgoing>_318</outgoing>
+    </task>
+    <task completionQuantity="2" id="_276" isForCompensation="false" name="Внесение биологического консерванта (a1,12)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_18</incoming>
+      <outgoing>_317</outgoing>
+    </task>
+    <task completionQuantity="2" id="_275" isForCompensation="false" name="Внесение химического консерванта (a1,11)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_17</incoming>
+      <outgoing>_316</outgoing>
+    </task>
+    <startEvent id="_269" isInterrupting="true" name="Травостой готов к скашиванию" parallelMultiple="false">
+      <extensionElements>
+        <yaoqiang:style fontSize="24" fontStyle="0"/>
+      </extensionElements>
+      <outgoing>_60</outgoing>
+      <outputSet/>
+    </startEvent>
+    <task completionQuantity="2" id="_261" isForCompensation="false" name="Подбор валков с измельчением (a1,9)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_299</incoming>
+      <outgoing>_301</outgoing>
+    </task>
+    <task completionQuantity="2" id="_241" isForCompensation="false" name="Сгребание из прокосов в валки (a1,6)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_6</incoming>
+      <outgoing>_4</outgoing>
+    </task>
+    <task completionQuantity="2" id="_235" isForCompensation="false" name="Ворошение в прокосе (a1,5)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_119</incoming>
+      <outgoing>_297</outgoing>
+    </task>
+    <task completionQuantity="2" id="_230" isForCompensation="false" name="Ворошение валка  (a1,8)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_10</incoming>
+      <outgoing>_9</outgoing>
+    </task>
+    <task completionQuantity="2" id="_227" isForCompensation="false" name="Прямое комбайнирование (a1,1)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_63</incoming>
+      <outgoing>_285</outgoing>
+    </task>
+    <task completionQuantity="2" id="_164" isForCompensation="false" name="Скашивание с плющением стебля (a1,3)" startQuantity="0">
+      <extensionElements>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+        <yaoqiang:style fontSize="24"/>
+      </extensionElements>
+      <incoming>_62</incoming>
+      <outgoing>_125</outgoing>
+    </task>
+    <task completionQuantity="2" id="_51" isForCompensation="false" name="Скашивание (a1,2)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_61</incoming>
+      <outgoing>_118</outgoing>
+    </task>
+    <task completionQuantity="2" id="_36" isForCompensation="false" name="Скашивание с перебиванием стебля (a1,4)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_64</incoming>
+      <outgoing>_305</outgoing>
+    </task>
+    <sequenceFlow id="_96" sourceRef="_84" targetRef="_90"/>
+    <sequenceFlow id="_285" sourceRef="_227" targetRef="_77">
+      <extensionElements>
+        <yaoqiang:style strokeColor="#FF0000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="_125" sourceRef="_164" targetRef="_65"/>
+    <sequenceFlow id="_119" sourceRef="_65" targetRef="_235"/>
+    <sequenceFlow id="_118" sourceRef="_51" targetRef="_65"/>
+    <sequenceFlow id="_109" sourceRef="_295" targetRef="_105"/>
+    <sequenceFlow id="_108" sourceRef="_294" targetRef="_105"/>
+    <sequenceFlow id="_107" sourceRef="_293" targetRef="_105"/>
+    <sequenceFlow id="_64" sourceRef="_59" targetRef="_36"/>
+    <sequenceFlow id="_63" sourceRef="_59" targetRef="_227"/>
+    <sequenceFlow id="_62" sourceRef="_59" targetRef="_164"/>
+    <sequenceFlow id="_61" sourceRef="_59" targetRef="_51"/>
+    <sequenceFlow id="_60" sourceRef="_269" targetRef="_59"/>
+    <sequenceFlow id="_113" sourceRef="_292" targetRef="_103"/>
+    <sequenceFlow id="_114" sourceRef="_103" targetRef="_293"/>
+    <sequenceFlow id="_115" sourceRef="_103" targetRef="_294"/>
+    <sequenceFlow id="_116" sourceRef="_103" targetRef="_295"/>
+    <sequenceFlow id="_16" sourceRef="_77" targetRef="_84"/>
+    <sequenceFlow id="_17" sourceRef="_77" targetRef="_275"/>
+    <sequenceFlow id="_18" sourceRef="_77" targetRef="_276"/>
+    <sequenceFlow id="_19" sourceRef="_77" targetRef="_277"/>
+    <endEvent id="_23" name="Силос убран">
+      <extensionElements>
+        <yaoqiang:style fontSize="24"/>
+        <yaoqiang:label offset-x="0.0" offset-y="32.0"/>
+      </extensionElements>
+      <incoming>_24</incoming>
+      <inputSet/>
+    </endEvent>
+    <sequenceFlow id="_24" sourceRef="_105" targetRef="_23"/>
+    <exclusiveGateway gatewayDirection="Diverging" id="_65" name="Exclusive Gateway">
+      <extensionElements>
+        <yaoqiang:label offset-x="3.0" offset-y="55.0"/>
+      </extensionElements>
+      <incoming>_118</incoming>
+      <incoming>_125</incoming>
+      <incoming>_305</incoming>
+      <outgoing>_119</outgoing>
+      <outgoing>_310</outgoing>
+      <outgoing>_298</outgoing>
+      <outgoing>_42</outgoing>
+      <outgoing>_43</outgoing>
+      <outgoing>_44</outgoing>
+      <outgoing>_71</outgoing>
+      <outgoing>_72</outgoing>
+    </exclusiveGateway>
+    <task completionQuantity="2" id="_296" isForCompensation="false" name="Сгребание из прокосов в валки (a1,6)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_297</incoming>
+      <outgoing>_299</outgoing>
+    </task>
+    <sequenceFlow id="_297" sourceRef="_235" targetRef="_296"/>
+    <sequenceFlow id="_299" sourceRef="_296" targetRef="_261"/>
+    <sequenceFlow id="_301" sourceRef="_261" targetRef="_77"/>
+    <task completionQuantity="2" id="_302" isForCompensation="false" name="Подбор валков с измельчением (a1,9)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_5</incoming>
+      <outgoing>_304</outgoing>
+    </task>
+    <sequenceFlow id="_304" sourceRef="_302" targetRef="_77"/>
+    <sequenceFlow id="_305" sourceRef="_36" targetRef="_65"/>
+    <task completionQuantity="2" id="_307" isForCompensation="false" name="Сгребание из прокосов в валки (a1,6)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_8</incoming>
+      <outgoing>_312</outgoing>
+    </task>
+    <sequenceFlow id="_310" sourceRef="_65" targetRef="_7"/>
+    <task completionQuantity="2" id="_311" isForCompensation="false" name="Ворошение валка  (a1,7)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_312</incoming>
+      <outgoing>_10</outgoing>
+    </task>
+    <sequenceFlow id="_312" sourceRef="_307" targetRef="_311"/>
+    <task completionQuantity="2" id="_313" isForCompensation="false" name="Подбор валков с измельчением (a1,9)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_9</incoming>
+      <outgoing>_315</outgoing>
+    </task>
+    <sequenceFlow id="_315" sourceRef="_313" targetRef="_77"/>
+    <sequenceFlow id="_316" sourceRef="_275" targetRef="_90"/>
+    <sequenceFlow id="_317" sourceRef="_276" targetRef="_90"/>
+    <sequenceFlow id="_318" sourceRef="_277" targetRef="_90"/>
+    <exclusiveGateway gatewayDirection="Diverging" id="_103" name="Exclusive Gateway">
+      <extensionElements>
+        <yaoqiang:label offset-x="3.0" offset-y="55.0"/>
+      </extensionElements>
+      <incoming>_113</incoming>
+      <incoming>_319</incoming>
+      <outgoing>_116</outgoing>
+      <outgoing>_115</outgoing>
+      <outgoing>_114</outgoing>
+    </exclusiveGateway>
+    <sequenceFlow id="_319" sourceRef="_291" targetRef="_103"/>
+    <sequenceFlow id="_320" sourceRef="_90" targetRef="_292"/>
+    <sequenceFlow id="_321" sourceRef="_90" targetRef="_291"/>
+    <task completionQuantity="2" id="_2" isForCompensation="false" name="Ворошение в прокосе (a1,5)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_298</incoming>
+      <outgoing>_6</outgoing>
+    </task>
+    <sequenceFlow id="_298" sourceRef="_65" targetRef="_2"/>
+    <task completionQuantity="2" id="_3" isForCompensation="false" name="Ворошение валка  (a1,7)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_4</incoming>
+      <outgoing>_5</outgoing>
+    </task>
+    <sequenceFlow id="_4" sourceRef="_241" targetRef="_3"/>
+    <sequenceFlow id="_5" sourceRef="_3" targetRef="_302"/>
+    <sequenceFlow id="_6" sourceRef="_2" targetRef="_241"/>
+    <task completionQuantity="2" id="_7" isForCompensation="false" name="Ворошение в прокосе (a1,5)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_310</incoming>
+      <outgoing>_8</outgoing>
+    </task>
+    <sequenceFlow id="_8" sourceRef="_7" targetRef="_307"/>
+    <sequenceFlow id="_9" sourceRef="_230" targetRef="_313"/>
+    <sequenceFlow id="_10" sourceRef="_311" targetRef="_230"/>
+    <task completionQuantity="2" id="_12" isForCompensation="false" name="Ворошение валка  (a1,7)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_32</incoming>
+      <outgoing>_33</outgoing>
+    </task>
+    <task completionQuantity="2" id="_14" isForCompensation="false" name="Подбор валков с измельчением (a1,9)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_37</incoming>
+      <outgoing>_41</outgoing>
+    </task>
+    <task completionQuantity="2" id="_15" isForCompensation="false" name="Ворошение валка  (a1,7)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_31</incoming>
+      <outgoing>_38</outgoing>
+    </task>
+    <task completionQuantity="2" id="_20" isForCompensation="false" name="Сгребание из прокосов в валки (a1,6)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_44</incoming>
+      <outgoing>_31</outgoing>
+    </task>
+    <task completionQuantity="2" id="_21" isForCompensation="false" name="Подбор валков с измельчением (a1,9)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_33</incoming>
+      <outgoing>_40</outgoing>
+    </task>
+    <task completionQuantity="2" id="_22" isForCompensation="false" name="Сгребание из прокосов в валки (a1,6)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_42</incoming>
+      <outgoing>_29</outgoing>
+    </task>
+    <task completionQuantity="2" id="_25" isForCompensation="false" name="Ворошение валка  (a1,8)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_38</incoming>
+      <outgoing>_37</outgoing>
+    </task>
+    <task completionQuantity="2" id="_27" isForCompensation="false" name="Сгребание из прокосов в валки (a1,6)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_43</incoming>
+      <outgoing>_32</outgoing>
+    </task>
+    <task completionQuantity="2" id="_28" isForCompensation="false" name="Подбор валков с измельчением (a1,9)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_29</incoming>
+      <outgoing>_39</outgoing>
+    </task>
+    <sequenceFlow id="_29" sourceRef="_22" targetRef="_28"/>
+    <sequenceFlow id="_31" sourceRef="_20" targetRef="_15"/>
+    <sequenceFlow id="_32" sourceRef="_27" targetRef="_12"/>
+    <sequenceFlow id="_33" sourceRef="_12" targetRef="_21"/>
+    <sequenceFlow id="_37" sourceRef="_25" targetRef="_14"/>
+    <sequenceFlow id="_38" sourceRef="_15" targetRef="_25"/>
+    <sequenceFlow id="_39" sourceRef="_28" targetRef="_77"/>
+    <sequenceFlow id="_40" sourceRef="_21" targetRef="_77"/>
+    <sequenceFlow id="_41" sourceRef="_14" targetRef="_77"/>
+    <sequenceFlow id="_42" sourceRef="_65" targetRef="_22"/>
+    <sequenceFlow id="_43" sourceRef="_65" targetRef="_27"/>
+    <sequenceFlow id="_44" sourceRef="_65" targetRef="_20"/>
+    <task completionQuantity="2" id="_47" isForCompensation="false" name="Ворошение валка  (a1,8)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_67</incoming>
+      <outgoing>_66</outgoing>
+    </task>
+    <task completionQuantity="2" id="_49" isForCompensation="false" name="Подбор валков с измельчением (a1,9)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_58</incoming>
+      <outgoing>_69</outgoing>
+    </task>
+    <task completionQuantity="2" id="_52" isForCompensation="false" name="Ворошение валка  (a1,7)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_72</incoming>
+      <outgoing>_67</outgoing>
+    </task>
+    <task completionQuantity="2" id="_53" isForCompensation="false" name="Подбор валков с измельчением (a1,9)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_66</incoming>
+      <outgoing>_70</outgoing>
+    </task>
+    <task completionQuantity="2" id="_54" isForCompensation="false" name="Ворошение валка  (a1,7)" startQuantity="0">
+      <extensionElements>
+        <yaoqiang:style align="center" fontSize="24" whiteSpace="wrap"/>
+        <ctss:template_id>
+          <template_id>
+            <template_id>
+              <template_id>
+                <template_id>
+                  <template_id>
+                    <template_id>
+                      <template_id>
+                        <template_id>
+                          <template_id>
+                            <template_id>
+                              <template_id>
+                                <template_id>
+                                  <template_id>05110de6-86ec-446e-8988-5e30c90d0b18</template_id>
+                                </template_id>
+                              </template_id>
+                            </template_id>
+                          </template_id>
+                        </template_id>
+                      </template_id>
+                    </template_id>
+                  </template_id>
+                </template_id>
+              </template_id>
+            </template_id>
+          </template_id>
+        </ctss:template_id>
+      </extensionElements>
+      <incoming>_71</incoming>
+      <outgoing>_58</outgoing>
+    </task>
+    <sequenceFlow id="_58" sourceRef="_54" targetRef="_49"/>
+    <sequenceFlow id="_66" sourceRef="_47" targetRef="_53"/>
+    <sequenceFlow id="_67" sourceRef="_52" targetRef="_47"/>
+    <sequenceFlow id="_69" sourceRef="_49" targetRef="_77"/>
+    <sequenceFlow id="_70" sourceRef="_53" targetRef="_77"/>
+    <sequenceFlow id="_71" sourceRef="_65" targetRef="_54"/>
+    <sequenceFlow id="_72" sourceRef="_65" targetRef="_52"/>
+  </process>
+  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-PROCESS_1" name="Untitled Diagram" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="PROCESS_1">
+      <bpmndi:BPMNShape bpmnElement="_105" id="Yaoqiang-_105" isMarkerVisible="true">
+        <dc:Bounds height="42.0" width="42.0" x="5150.299971980867" y="676.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="96.0" x="5126.3" y="775.87"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_90" id="Yaoqiang-_90" isMarkerVisible="true">
+        <dc:Bounds height="42.0" width="42.0" x="4041.2999719808668" y="629.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="96.0" x="4017.3" y="728.87"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_84" id="Yaoqiang-_84">
+        <dc:Bounds height="120.0" width="236.0" x="3616.552277466002" y="323.94046443355614"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="156.0" x="3656.55" y="335.85"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_77" id="Yaoqiang-_77" isMarkerVisible="true">
+        <dc:Bounds height="42.0" width="42.0" x="3329.2999719808663" y="291.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="96.0" x="3305.3" y="390.87"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_59" id="Yaoqiang-_59" isMarkerVisible="true">
+        <dc:Bounds height="42.0" width="42.0" x="630.2999719808663" y="798.865404775394"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="96.0" x="606.3" y="897.87"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_295" id="Yaoqiang-_295">
+        <dc:Bounds height="120.0" width="236.0" x="4848.930876646245" y="798.9015976658839"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="164.0" x="4884.93" y="826.81"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_294" id="Yaoqiang-_294">
+        <dc:Bounds height="120.0" width="236.0" x="4848.930876646245" y="633.9015976658839"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="160.0" x="4886.93" y="661.81"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_293" id="Yaoqiang-_293">
+        <dc:Bounds height="120.0" width="236.0" x="4848.930876646245" y="465.90159766588386"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="184.0" x="4874.93" y="493.81"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_292" id="Yaoqiang-_292">
+        <dc:Bounds height="120.0" width="236.0" x="4220.930876646245" y="405.90159766588386"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="200.0" x="4238.93" y="417.81"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_291" id="Yaoqiang-_291">
+        <dc:Bounds height="120.0" width="236.0" x="4210.930876646245" y="807.9015976658839"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="200.0" x="4228.93" y="819.81"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_277" id="Yaoqiang-_277">
+        <dc:Bounds height="141.0" width="236.0" x="3608.0" y="914.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="132.19" width="210.0" x="3621.0" y="920.41"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_276" id="Yaoqiang-_276">
+        <dc:Bounds height="149.0" width="236.0" x="3612.0" y="716.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="132.19" width="179.0" x="3640.5" y="726.41"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_275" id="Yaoqiang-_275">
+        <dc:Bounds height="137.0" width="236.0" x="3609.0" y="523.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="132.19" width="145.0" x="3654.5" y="527.41"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_269" id="Yaoqiang-_269">
+        <dc:Bounds height="32.0" width="32.0" x="337.62577408641755" y="803.7469845392482"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="36.19" width="351.0" x="178.12" y="835.41"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_261" id="Yaoqiang-_261">
+        <dc:Bounds height="120.0" width="236.0" x="2960.7482021650594" y="481.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="194.0" x="2981.75" y="493.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_241" id="Yaoqiang-_241">
+        <dc:Bounds height="120.0" width="236.0" x="1996.7482021650594" y="758.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="199.0" x="2015.25" y="770.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_235" id="Yaoqiang-_235">
+        <dc:Bounds height="120.0" width="236.0" x="1681.7482021650594" y="478.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="164.0" x="1717.75" y="506.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_230" id="Yaoqiang-_230">
+        <dc:Bounds height="120.0" width="236.0" x="2643.7482021650594" y="986.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="204.0" x="2659.75" y="1014.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_227" id="Yaoqiang-_227">
+        <dc:Bounds height="120.0" width="236.0" x="999.930876646245" y="253.90159766588386"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="205.0" x="1015.43" y="265.81"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_164" id="Yaoqiang-_164">
+        <dc:Bounds height="120.0" width="236.0" x="1004.423624999999" y="879.7182386646568"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="163.0" x="1040.92" y="891.62"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_51" id="Yaoqiang-_51">
+        <dc:Bounds height="120.0" width="236.0" x="1005.423624999999" y="561.7182386646568"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="36.19" width="213.0" x="1016.92" y="605.62"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_36" id="Yaoqiang-_36">
+        <dc:Bounds height="118.0" width="239.0" x="1004.423624999999" y="1124.7182386646568"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="168.0" x="1039.92" y="1135.62"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_23" id="Yaoqiang-_23">
+        <dc:Bounds height="32.0" width="32.0" x="5368.566837138424" y="692.6323279395085"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="36.19" width="148.0" x="5310.57" y="756.54"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_65" id="Yaoqiang-_65" isMarkerVisible="true">
+        <dc:Bounds height="42.0" width="42.0" x="1411.6574030997717" y="675.5902515278302"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="96.0" x="1387.66" y="774.59"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_296" id="Yaoqiang-_296">
+        <dc:Bounds height="120.0" width="236.0" x="2000.7482021650594" y="480.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="199.0" x="2019.25" y="492.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_302" id="Yaoqiang-_302">
+        <dc:Bounds height="120.0" width="236.0" x="2958.7482021650594" y="757.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="194.0" x="2979.75" y="769.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_307" id="Yaoqiang-_307">
+        <dc:Bounds height="120.0" width="236.0" x="2001.7482021650594" y="983.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="199.0" x="2020.25" y="995.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_311" id="Yaoqiang-_311">
+        <dc:Bounds height="120.0" width="236.0" x="2325.7482021650594" y="983.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="204.0" x="2341.75" y="1011.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_313" id="Yaoqiang-_313">
+        <dc:Bounds height="120.0" width="236.0" x="2962.7482021650594" y="987.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="194.0" x="2983.75" y="999.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_103" id="Yaoqiang-_103" isMarkerVisible="true">
+        <dc:Bounds height="42.0" width="42.0" x="4600.299971980867" y="636.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="96.0" x="4576.3" y="735.87"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" id="Yaoqiang-_2">
+        <dc:Bounds height="120.0" width="236.0" x="1678.2819859310632" y="760.7222048507492"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="164.0" x="1714.28" y="788.63"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" id="Yaoqiang-_3">
+        <dc:Bounds height="120.0" width="236.0" x="2325.7482021650594" y="761.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="204.0" x="2341.75" y="789.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" id="Yaoqiang-_7">
+        <dc:Bounds height="120.0" width="236.0" x="1683.2819859310632" y="984.7222048507492"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="164.0" x="1719.28" y="1012.63"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" id="Yaoqiang-_12">
+        <dc:Bounds height="120.0" width="236.0" x="2335.7482021650594" y="1526.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="204.0" x="2351.75" y="1554.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" id="Yaoqiang-_14">
+        <dc:Bounds height="120.0" width="236.0" x="2972.7482021650594" y="1752.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="194.0" x="2993.75" y="1764.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" id="Yaoqiang-_15">
+        <dc:Bounds height="120.0" width="236.0" x="2335.7482021650594" y="1748.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="204.0" x="2351.75" y="1776.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_20" id="Yaoqiang-_20">
+        <dc:Bounds height="120.0" width="236.0" x="2011.7482021650594" y="1748.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="199.0" x="2030.25" y="1760.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_21" id="Yaoqiang-_21">
+        <dc:Bounds height="120.0" width="236.0" x="2968.7482021650594" y="1522.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="194.0" x="2989.75" y="1534.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_22" id="Yaoqiang-_22">
+        <dc:Bounds height="120.0" width="236.0" x="2010.7482021650594" y="1245.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="199.0" x="2029.25" y="1257.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_25" id="Yaoqiang-_25">
+        <dc:Bounds height="120.0" width="236.0" x="2653.7482021650594" y="1751.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="204.0" x="2669.75" y="1779.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_27" id="Yaoqiang-_27">
+        <dc:Bounds height="120.0" width="236.0" x="2006.7482021650594" y="1523.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="199.0" x="2025.25" y="1535.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_28" id="Yaoqiang-_28">
+        <dc:Bounds height="120.0" width="236.0" x="2970.7482021650594" y="1246.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="194.0" x="2991.75" y="1258.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_47" id="Yaoqiang-_47">
+        <dc:Bounds height="120.0" width="236.0" x="2658.7482021650594" y="2241.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="204.0" x="2674.75" y="2269.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_49" id="Yaoqiang-_49">
+        <dc:Bounds height="120.0" width="236.0" x="2973.7482021650594" y="2012.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="194.0" x="2994.75" y="2024.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_52" id="Yaoqiang-_52">
+        <dc:Bounds height="120.0" width="236.0" x="2340.7482021650594" y="2238.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="204.0" x="2356.75" y="2266.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_53" id="Yaoqiang-_53">
+        <dc:Bounds height="120.0" width="236.0" x="2977.7482021650594" y="2242.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="100.19" width="194.0" x="2998.75" y="2254.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_54" id="Yaoqiang-_54">
+        <dc:Bounds height="120.0" width="236.0" x="2340.7482021650594" y="2016.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="68.19" width="204.0" x="2356.75" y="2044.7"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_58" id="Yaoqiang-_58">
+        <di:waypoint x="2577.0" y="2076.7937855664436"/>
+        <di:waypoint x="2974.0" y="2072.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2772.25" y="2064.9"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9" id="Yaoqiang-_9">
+        <di:waypoint x="2880.0" y="1046.7937855664436"/>
+        <di:waypoint x="2963.0" y="1047.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2918.25" y="1037.91"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8" id="Yaoqiang-_8">
+        <di:waypoint x="1919.0" y="1044.7222048507492"/>
+        <di:waypoint x="2002.0" y="1043.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1957.52" y="1034.63"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6" id="Yaoqiang-_6">
+        <di:waypoint x="1914.0" y="820.7222048507492"/>
+        <di:waypoint x="1997.0" y="818.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1952.52" y="810.13"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_44" id="Yaoqiang-_44">
+        <di:waypoint x="1453.5902515278303" y="696.5902515278302"/>
+        <di:waypoint x="1556.5409096189048" y="1200.2716411306014"/>
+        <di:waypoint x="2012.0" y="1808.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1553.54" y="1419.31"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5" id="Yaoqiang-_5">
+        <di:waypoint x="2562.0" y="821.7937855664436"/>
+        <di:waypoint x="2959.0" y="817.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2757.25" y="809.9"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_43" id="Yaoqiang-_43">
+        <di:waypoint x="1453.5902515278303" y="696.5902515278302"/>
+        <di:waypoint x="1556.5409096189048" y="1116.5533053542858"/>
+        <di:waypoint x="2007.0" y="1583.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1553.54" y="1304.31"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4" id="Yaoqiang-_4">
+        <di:waypoint x="2233.0" y="818.7937855664436"/>
+        <di:waypoint x="2326.0" y="821.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2276.25" y="810.91"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_42" id="Yaoqiang-_42">
+        <di:waypoint x="1453.5902515278303" y="696.5902515278302"/>
+        <di:waypoint x="1553.4402305160784" y="983.2241039327463"/>
+        <di:waypoint x="2011.0" y="1305.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1550.44" y="1170.41"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41" id="Yaoqiang-_41">
+        <di:waypoint x="3209.0" y="1812.7937855664436"/>
+        <di:waypoint x="3329.134595224606" y="312.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3266.02" y="1053.15"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_40" id="Yaoqiang-_40">
+        <di:waypoint x="3205.0" y="1582.7937855664436"/>
+        <di:waypoint x="3329.134595224606" y="312.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3264.02" y="938.15"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_299" id="Yaoqiang-_299">
+        <di:waypoint x="2237.0" y="540.7937855664436"/>
+        <di:waypoint x="2961.0" y="541.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2595.75" y="531.91"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_298" id="Yaoqiang-_298">
+        <di:waypoint x="1453.5902515278303" y="696.5902515278302"/>
+        <di:waypoint x="1678.0" y="820.7222048507492"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1562.97" y="748.84"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_297" id="Yaoqiang-_297">
+        <di:waypoint x="1918.0" y="538.7937855664436"/>
+        <di:waypoint x="2001.0" y="540.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1956.25" y="530.41"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_39" id="Yaoqiang-_39">
+        <di:waypoint x="3207.0" y="1306.7937855664436"/>
+        <di:waypoint x="3329.134595224606" y="312.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3265.02" y="800.15"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_38" id="Yaoqiang-_38">
+        <di:waypoint x="2572.0" y="1808.7937855664436"/>
+        <di:waypoint x="2654.0" y="1811.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2609.75" y="1800.91"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_37" id="Yaoqiang-_37">
+        <di:waypoint x="2890.0" y="1811.7937855664436"/>
+        <di:waypoint x="2973.0" y="1812.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2928.25" y="1802.91"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_33" id="Yaoqiang-_33">
+        <di:waypoint x="2572.0" y="1586.7937855664436"/>
+        <di:waypoint x="2969.0" y="1582.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2767.25" y="1574.9"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_32" id="Yaoqiang-_32">
+        <di:waypoint x="2243.0" y="1583.7937855664436"/>
+        <di:waypoint x="2336.0" y="1586.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2286.25" y="1575.91"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_31" id="Yaoqiang-_31">
+        <di:waypoint x="2248.0" y="1808.7937855664436"/>
+        <di:waypoint x="2336.0" y="1808.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2289.0" y="1799.16"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_96" id="Yaoqiang-_96">
+        <di:waypoint x="3853.0" y="383.94046443355614"/>
+        <di:waypoint x="4062.0" y="474.0"/>
+        <di:waypoint x="4062.0" y="630.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="4059.0" y="392.83"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_321" id="Yaoqiang-_321">
+        <di:waypoint x="4082.865404775394" y="650.8654047753939"/>
+        <di:waypoint x="4211.0" y="867.9015976658839"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="4144.12" y="749.56"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_320" id="Yaoqiang-_320">
+        <di:waypoint x="4082.865404775394" y="650.8654047753939"/>
+        <di:waypoint x="4221.0" y="465.90159766588386"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="4149.12" y="548.93"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_285" id="Yaoqiang-_285">
+        <di:waypoint x="1236.0" y="313.90159766588386"/>
+        <di:waypoint x="3329.134595224606" y="312.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2279.62" y="303.79"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_125" id="Yaoqiang-_125">
+        <di:waypoint x="1240.0" y="882.0"/>
+        <di:waypoint x="1360.0" y="882.0"/>
+        <di:waypoint x="1412.4097484721697" y="696.5902515278302"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1357.0" y="813.45"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_29" id="Yaoqiang-_29">
+        <di:waypoint x="2247.0" y="1305.7937855664436"/>
+        <di:waypoint x="2971.0" y="1306.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2605.75" y="1296.91"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_24" id="Yaoqiang-_24">
+        <di:waypoint x="5191.8654047753935" y="697.8654047753939"/>
+        <di:waypoint x="5369.004225018589" y="708.6323279395085"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="5277.43" y="693.61"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_319" id="Yaoqiang-_319">
+        <di:waypoint x="4447.0" y="881.0"/>
+        <di:waypoint x="4621.0" y="881.0"/>
+        <di:waypoint x="4621.0" y="679.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="4618.0" y="857.36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_318" id="Yaoqiang-_318">
+        <di:waypoint x="3844.0" y="984.5"/>
+        <di:waypoint x="4041.134595224606" y="650.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3939.65" y="808.13"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_317" id="Yaoqiang-_317">
+        <di:waypoint x="3848.0" y="790.5"/>
+        <di:waypoint x="4041.134595224606" y="650.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3941.65" y="711.13"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_316" id="Yaoqiang-_316">
+        <di:waypoint x="3845.0" y="591.5"/>
+        <di:waypoint x="4041.134595224606" y="650.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3940.15" y="611.46"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_315" id="Yaoqiang-_315">
+        <di:waypoint x="3199.0" y="1047.7937855664436"/>
+        <di:waypoint x="3238.848460479203" y="660.9106286468431"/>
+        <di:waypoint x="3329.134595224606" y="312.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3235.85" y="645.47"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_312" id="Yaoqiang-_312">
+        <di:waypoint x="2238.0" y="1043.7937855664436"/>
+        <di:waypoint x="2326.0" y="1043.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2279.0" y="1034.16"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_310" id="Yaoqiang-_310">
+        <di:waypoint x="1453.5902515278303" y="696.5902515278302"/>
+        <di:waypoint x="1612.0" y="836.0"/>
+        <di:waypoint x="1683.0" y="1044.7222048507492"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1609.0" y="817.31"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_119" id="Yaoqiang-_119">
+        <di:waypoint x="1453.5902515278303" y="696.5902515278302"/>
+        <di:waypoint x="1533.0" y="556.0"/>
+        <di:waypoint x="1682.0" y="556.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1530.0" y="581.86"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_118" id="Yaoqiang-_118">
+        <di:waypoint x="1241.0" y="610.0"/>
+        <di:waypoint x="1342.0" y="610.0"/>
+        <di:waypoint x="1412.4097484721697" y="696.5902515278302"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1339.0" y="628.36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_116" id="Yaoqiang-_116">
+        <di:waypoint x="4641.8654047753935" y="657.8654047753939"/>
+        <di:waypoint x="4724.0" y="855.0"/>
+        <di:waypoint x="4849.0" y="855.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="4721.0" y="768.23"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_115" id="Yaoqiang-_115">
+        <di:waypoint x="4633.0" y="667.0"/>
+        <di:waypoint x="4726.0" y="667.0"/>
+        <di:waypoint x="4849.0" y="667.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="4738.0" y="657.36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_114" id="Yaoqiang-_114">
+        <di:waypoint x="4641.8654047753935" y="657.8654047753939"/>
+        <di:waypoint x="4708.0" y="525.0"/>
+        <di:waypoint x="4849.0" y="525.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="4705.0" y="544.36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_113" id="Yaoqiang-_113">
+        <di:waypoint x="4457.0" y="465.90159766588386"/>
+        <di:waypoint x="4621.0" y="577.0"/>
+        <di:waypoint x="4621.0" y="637.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="4618.0" y="459.81"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19" id="Yaoqiang-_19">
+        <di:waypoint x="3370.865404775394" y="312.8654047753939"/>
+        <di:waypoint x="3608.0" y="984.5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3486.65" y="638.83"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_18" id="Yaoqiang-_18">
+        <di:waypoint x="3370.865404775394" y="312.8654047753939"/>
+        <di:waypoint x="3612.0" y="790.5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3488.65" y="541.83"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17" id="Yaoqiang-_17">
+        <di:waypoint x="3370.865404775394" y="312.8654047753939"/>
+        <di:waypoint x="3609.0" y="591.5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3487.15" y="442.33"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_16" id="Yaoqiang-_16">
+        <di:waypoint x="3370.865404775394" y="312.8654047753939"/>
+        <di:waypoint x="3617.0" y="383.94046443355614"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3490.93" y="338.77"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10" id="Yaoqiang-_10">
+        <di:waypoint x="2562.0" y="1043.7937855664436"/>
+        <di:waypoint x="2644.0" y="1046.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2599.75" y="1035.91"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_305" id="Yaoqiang-_305">
+        <di:waypoint x="1243.0" y="1183.7182386646568"/>
+        <di:waypoint x="1429.0" y="1051.0"/>
+        <di:waypoint x="1429.0" y="714.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1426.0" y="1032.22"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_304" id="Yaoqiang-_304">
+        <di:waypoint x="3195.0" y="817.7937855664436"/>
+        <di:waypoint x="3243.4295756991173" y="583.0316699083049"/>
+        <di:waypoint x="3329.134595224606" y="312.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3240.43" y="537.05"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_72" id="Yaoqiang-_72">
+        <di:waypoint x="1453.59025152783" y="696.5902515278302"/>
+        <di:waypoint x="1514.73677878482" y="1514.2204388953248"/>
+        <di:waypoint x="2341.0" y="2298.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1511.74" y="1870.61"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_71" id="Yaoqiang-_71">
+        <di:waypoint x="1453.5902515278303" y="696.5902515278302"/>
+        <di:waypoint x="1529.0944733704582" y="1381.4117639781723"/>
+        <di:waypoint x="2341.0" y="2076.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="1526.09" y="1745.25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_70" id="Yaoqiang-_70">
+        <di:waypoint x="3214.0" y="2302.7937855664436"/>
+        <di:waypoint x="3329.134595224606" y="312.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3268.52" y="1298.15"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_301" id="Yaoqiang-_301">
+        <di:waypoint x="3197.0" y="541.7937855664436"/>
+        <di:waypoint x="3238.848460479203" y="441.01709809097076"/>
+        <di:waypoint x="3329.134595224606" y="312.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3235.85" y="393.47"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_109" id="Yaoqiang-_109">
+        <di:waypoint x="5085.0" y="841.0"/>
+        <di:waypoint x="5169.0" y="841.0"/>
+        <di:waypoint x="5169.0" y="717.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="5166.0" y="811.36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_108" id="Yaoqiang-_108">
+        <di:waypoint x="5085.0" y="693.9015976658839"/>
+        <di:waypoint x="5150.1345952246065" y="697.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="5114.62" y="686.2"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_107" id="Yaoqiang-_107">
+        <di:waypoint x="5085.0" y="564.0"/>
+        <di:waypoint x="5167.0" y="564.0"/>
+        <di:waypoint x="5167.0" y="681.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="5164.0" y="571.86"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_69" id="Yaoqiang-_69">
+        <di:waypoint x="3210.0" y="2072.7937855664436"/>
+        <di:waypoint x="3329.134595224606" y="312.8654047753939"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="3266.52" y="1183.15"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_67" id="Yaoqiang-_67">
+        <di:waypoint x="2577.0" y="2298.7937855664436"/>
+        <di:waypoint x="2659.0" y="2301.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2614.75" y="2290.91"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_66" id="Yaoqiang-_66">
+        <di:waypoint x="2895.0" y="2301.7937855664436"/>
+        <di:waypoint x="2978.0" y="2302.7937855664436"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="2933.25" y="2292.91"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_64" id="Yaoqiang-_64">
+        <di:waypoint x="671.865404775394" y="819.865404775394"/>
+        <di:waypoint x="818.388591381372" y="1191.1723107184675"/>
+        <di:waypoint x="1004.0" y="1191.1723107184675"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="815.39" y="1015.42"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_63" id="Yaoqiang-_63">
+        <di:waypoint x="671.865404775394" y="819.865404775394"/>
+        <di:waypoint x="728.0" y="312.0"/>
+        <di:waypoint x="1000.0" y="312.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="725.0" y="448.36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_62" id="Yaoqiang-_62">
+        <di:waypoint x="671.865404775394" y="819.865404775394"/>
+        <di:waypoint x="876.0" y="942.0"/>
+        <di:waypoint x="1004.0" y="942.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="873.0" y="833.23"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_61" id="Yaoqiang-_61">
+        <di:waypoint x="671.865404775394" y="819.865404775394"/>
+        <di:waypoint x="1005.0" y="621.7182386646568"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="835.86" y="711.58"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_60" id="Yaoqiang-_60">
+        <di:waypoint x="369.99799934918804" y="819.7469845392482"/>
+        <di:waypoint x="630.134595224606" y="819.865404775394"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.28" width="6.0" x="497.01" y="810.23"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

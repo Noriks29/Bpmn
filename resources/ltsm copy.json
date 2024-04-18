@@ -1,0 +1,27 @@
+{
+  "name": "LTSM",
+  "prefix": "ltsm",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "types": [
+    {
+      "name": "Props",
+      "superClass": [ "Element" ],
+      "properties": [
+        {
+          "name": "stream",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "volume",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    }
+  ],
+  "emumerations": [],
+  "associations": []
+}

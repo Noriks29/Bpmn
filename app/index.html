@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>bpmn-js-example-model-extension</title>
+
+  <meta charset="utf-8"/>
+
+  <link rel="stylesheet" href="vendor/bpmn-js/assets/diagram-js.css" />
+  <link rel="stylesheet" href="vendor/bpmn-js/assets/bpmn-font/css/bpmn-embedded.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/properties-panel.css" />
+  <link rel="stylesheet" href="css/diagram-js-minimap.css"/>
+  
+</head>
+<body>
+  <div class="content">
+  <div id="container"></div>
+  <div id="properties"></div>
+  <!-- div quality-assurance Отвечает за окно оверлея для редактирования параметров -->
+  <div id="quality-assurance" class="panel hidden">  
+    <form id="form">
+      <p>
+      <label>
+        <input id="suitability-score" type="checkbox">
+        Добавлено в маршрут
+      </label>
+      </p>
+      <br />
+      <p>
+        <b>Stream</b>
+        <br />
+        <input id="stream-score" type="text" placeholder="0" autocomplete="off">
+      </p>
+      <br />
+      <p>
+        <b>Volume</b>
+        <br />
+        <input id="volume-score" type="text" placeholder="0" autocomplete="off">
+      </p>
+      <br />
+      <p id="warning" class="hidden">
+        Stream или Volume должны быть числами
+      </p>
+      <br />
+      <p>
+        <b>Последние изменения</b>
+      </p>
+      <br />
+      <p id="last-checked">
+        -
+      </p>
+      <br />
+      <input id="okay" type="submit" value="Сохранить">
+    </form>
+  </div>
+  
+
+  <div id="hint" class="panel">Нахмите <b>правую кнопку мыши</b> чтобы редактировать свойства.
+    <input class="button_import" id="file" type="file" name="file">
+    <button class="button_save">Сохранить</button>
+  </div>
+</div>
+  <script src="app.js"></script> <!-- подключаем управляющий скрипт-->
+</html>
