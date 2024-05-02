@@ -5,9 +5,6 @@
   padding: 0;
 }
 
-html, body, #container {
-  height: 100%;
-}
 
 .hidden {
   display: none;
@@ -88,10 +85,61 @@ html, body, #container {
 }
 #container{
   flex: auto;
+}
+.flex_workplace{
   max-width: 90%;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 #properties{
   flex: initial;
   min-width: 10%;
   border-left: 1px solid black;
+}
+#resource-window{
+  position: absolute;
+  border: 3px solid #5c5c5c;
+  left: 15%;
+  right: 20%;
+  top: 10%;
+  bottom: 15%;
+  border-radius: 15px;
+  background-color: #fafafa;
+  overflow: auto;
+}
+
+#resource-flex{
+  display: flex;
+  border-top: 2px solid #5c5c5c;
+  flex: 1;
+}
+#resource-list{
+  min-width: 20%;
+  border-right: 2px solid #5c5c5c;
+  padding: 10px;
+  overflow: auto;
+}
+#resource-edit{
+  flex: 1;
+  padding: 10px;
+  overflow: auto;
+}
+.resource-div-h1{
+  text-align: center;
+  padding: 3px;
+}
+.resource-flex-col{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  
+}
+
+.resource{
+  border-bottom: 1px solid black;
+  margin: 5px 0px;
+  background-color: #efefef;
+  padding: 2px;
 }

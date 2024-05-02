@@ -17,6 +17,16 @@
           "name": "volume",
           "isAttr": true,
           "type": "Integer"
+        },
+        {
+          "name": "penalty_start",
+          "isAttr": true,
+          "type": "Integer"
+        },
+        {
+          "name": "penalty_angle",
+          "isAttr": true,
+          "type": "Integer"
         }
       ]
     }

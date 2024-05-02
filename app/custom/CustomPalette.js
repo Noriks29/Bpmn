@@ -37,17 +37,52 @@ export default class CustomPalette {
         create.start(event, shape);
       };
     }
+    function createExclusiveGateway(typeBPMN) {
+      return function(event) {
+        const businessObject = bpmnFactory.create(typeBPMN);
 
+        businessObject.gatewayDirection = "Diverging"
+
+        const shape = elementFactory.createShape({
+          type: typeBPMN,
+          businessObject: businessObject
+        });
+
+        create.start(event, shape);
+      };
+    }
+    //bpmn:ExclusiveGateway
     return {
-      'create.low-task': {
+      'create.parallelGateway': {
         group: 'activity',
-        className: 'bpmn-icon-task red',
-        title: translate('Create Task with low suitability score'),
+        className: 'bpmn-icon-gateway-parallel',
+        title: translate('Create Parallel Gateway'),
         action: {
-          dragstart: createTask(SUITABILITY_SCORE_LOW),
-          click: createTask(SUITABILITY_SCORE_LOW)
+          dragstart: createExclusiveGateway("bpmn:ParallelGateway"),
+          click: createExclusiveGateway("bpmn:ParallelGateway")
         }
       },
+      'create.xorGateway': {
+        group: 'activity',
+        className: 'bpmn-icon-gateway-xor',
+        title: translate('Create Exclusive Gateway'),
+        action: {
+          dragstart: createExclusiveGateway("bpmn:ExclusiveGateway"),
+          click: createExclusiveGateway("bpmn:ExclusiveGateway")
+        }
+      },
+      'create.orexclusiveGateway': {
+        group: 'activity',
+        className: 'bpmn-icon-gateway-or',
+        title: translate('Create Inclusive Gateway'),
+        action: {
+          dragstart: createExclusiveGateway("bpmn:InclusiveGateway"),
+          click: createExclusiveGateway("bpmn:InclusiveGateway")
+        }
+      }
+      /*
+              className: 'bpmn-icon-gateway-eventbased',
+              className: 'bpmn-icon-gateway-complex',
       'create.average-task': {
         group: 'activity',
         className: 'bpmn-icon-task yellow',
@@ -56,25 +91,7 @@ export default class CustomPalette {
           dragstart: createTask(SUITABILITY_SCORE_AVERGE),
           click: createTask(SUITABILITY_SCORE_AVERGE)
         }
-      },
-      'create.test-task': { //тестовый обьект
-        group: 'activity',
-        className: 'bpmn-icon-task test',
-        title: translate('Create test'),
-        action: {
-          dragstart: createTask(SUITABILITY_SCORE_AVERGE),
-          click: createTask(SUITABILITY_SCORE_AVERGE)
-        }
-      },
-      'create.high-task': {
-        group: 'activity',
-        className: 'bpmn-icon-task green',
-        title: translate('Create Task with high suitability score'),
-        action: {
-          dragstart: createTask(SUITABILITY_SCORE_HIGH),
-          click: createTask(SUITABILITY_SCORE_HIGH)
-        }
-      }
+      }*/
     };
   }
 }

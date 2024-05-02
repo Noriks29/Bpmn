@@ -1,0 +1,4 @@
+https://github.com/bpmn-io/properties-panel/blob/main/src/components/entries/index.js
+компоненты для панели свойств
+
+

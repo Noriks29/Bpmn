@@ -175,6 +175,8 @@ To build the example into the `public` folder execute
 npm run all
 ```
 
+https://github.com/bpmn-io/properties-panel/blob/main/src/components/entries/index.js
+
 
 ## License
 

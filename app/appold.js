@@ -21,29 +21,34 @@ import ltsmExtension from '../resources/ltsm'; // подгрузка касто�
 import resourcePropertiesProvider from './custom';
 import ltsmPropertiesProvider from './custom';
 
-const buttonSaveXML = document.querySelector('.button_save');
-const buttonShowResource = document.getElementById('resource_panel');
-
-const ResourceList = document.getElementById("resource-list");
-const ResourceEdit = document.getElementById("resource-edit");
-
 const HIGH_PRIORITY = 1500; // повышаем приоритет что бы система была важнее дефолтной(1000)
 
 const containerEl = document.getElementById('container'), //тут всё отображение
-      ResourceWindow = document.getElementById('resource-window'); //скрытый контейнер res
+      qualityAssuranceEl = document.getElementById('quality-assurance'), //скрытый контейнер с формой
+      ResourceWindow = document.getElementById('resource-window'), //скрытый контейнер res
+      suitabilityScoreEl = document.getElementById('suitability-score'), //чекбокс с добавление в маршрут
+      lastCheckedEl = document.getElementById('last-checked'), //время последнего обновления
+      formEl = document.getElementById('form'); // основной айди формы
 
 // hide quality assurance if user clicks outside
 //скрываем форму редактирования обьекта при клике вне фрэйма
 window.addEventListener('click', (event) => {
   const { target } = event;
-  console.log(target)
-  if (target === ResourceWindow || target === buttonShowResource || ResourceWindow.contains(target) || target.id == "addRes") {
+  if (target === qualityAssuranceEl || qualityAssuranceEl.contains(target)) {
     return;
   }
+  if (target === ResourceWindow || target === buttonShowResource ) {
+    return;
+  }
+  qualityAssuranceEl.classList.add('hidden');
   ResourceWindow.classList.add('hidden');
 });
 
-
+const buttonShowResource = document.getElementById('resource_panel');
+buttonShowResource.addEventListener('click', async function() {
+  ResourceWindow.classList.remove('hidden');
+  console.log("sdfsdfsdf")
+})
 
 
 // create modeler
@@ -83,10 +88,12 @@ buttonImportXML.addEventListener('change', function(file_input) {
       console.error(`Произошла ошибка при чтении файла`);
     });
   }
+  /*bpmnModeler.clear();
+  bpmnModeler.createDiagram();*/
 })
 
 // save file
-
+const buttonSaveXML = document.querySelector('.button_save');
 buttonSaveXML.addEventListener('click', async function() {
   console.log("click!!");
   try {
@@ -107,15 +114,25 @@ bpmnModeler.importXML(file).then(() => {
 
   const moddle = bpmnModeler.get('moddle'),
         modeling = bpmnModeler.get('modeling');
-  const RootElement = bpmnModeler._definitions.rootElements
-
   
-  let businessObject,
-      element;
+  let analysisDetails,
+      businessObject,
+      element,
+      suitabilityScore;
 
+/*
+  bpmnModeler._definitions.rootElements.push( bpmnModeler._definitions.rootElements[1])
+  const Res = moddle.create('bpmn:Resource')
+  console.log(Res)
+  Res.id = "nametest"
+  bpmnModeler._definitions.rootElements.push(Res)*/
+
+  // open quality assurance if user right clicks on element
   bpmnModeler.on('element.contextmenu', HIGH_PRIORITY, (event) => {
+    suitabilityScoreEl.checked = false
     event.originalEvent.preventDefault();
     event.originalEvent.stopPropagation();
+    qualityAssuranceEl.classList.remove('hidden');
     ({ element } = event);
     
     // ignore root element
@@ -125,126 +142,69 @@ bpmnModeler.importXML(file).then(() => {
     businessObject = getBusinessObject(element)
 
     console.log(element)
+
+    try{
+      const { suitabilityScore } = getExtensionElement(businessObject, 'qa:AnalysisDetails');
+      suitabilityScoreEl.checked = suitabilityScore ? suitabilityScore : '';
+    }
+    catch(err){
+      console.log(err)
+    }
+
+    analysisDetails = getExtensionElement(businessObject, 'qa:AnalysisDetails');
+    lastCheckedEl.textContent = analysisDetails ? analysisDetails.lastChecked : '-';
   });
 
-  function UppdateResourceList(){
-    ResourceList.innerHTML = ''
-    RootElement.forEach(element => {
-      if(element.$type === "bpmn:Resource")
-      {
-        //console.log(element.name)
-        let resource = document.createElement("div")
-        resource.className = "resource"
-        resource.id = element.id
-        resource.innerHTML = element.name
-        ResourceList.append(resource)
+  // set suitability core and last checked if user submits
+  formEl.addEventListener('submit', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    /*
+    suitabilityScore = suitabilityScoreEl.checked;
+    console.log(event,element)
+    const extensionElements = businessObject.extensionElements || moddle.create('bpmn:ExtensionElements');
+    if (!analysisDetails) {
+      console.log("создан элемент AnalysisDetails");
+      analysisDetails = moddle.create('qa:AnalysisDetails');
+      extensionElements.get('values').push(analysisDetails);
+    }
+    
+    const values = [...extensionElements.get('values')];
+    extensionElements.set('values', values.map((value) => {
+      if (value.$type === 'qa:AnalysisDetails') {
+        return Object.assign(value, {
+          suitabilityScore: suitabilityScore
+        });
       }
+      return value;
+    }));
 
-    });
-    let resource = document.createElement("div")
-    resource.className = "resource"
-    resource.id = "addRes"
-    resource.innerHTML = "Добавить ресурс"
-    ResourceList.append(resource)
-  }
-  
-  buttonShowResource.addEventListener('click', async function() {
-    //console.log(bpmnModeler._definitions.rootElements)
-    UppdateResourceList()
-    ResourceWindow.classList.remove('hidden');
-  })
+    analysisDetails.lastChecked = new Date().toISOString();
+    modeling.updateProperties(element, {
+      extensionElements,
+      suitable: suitabilityScore
+    });*/
 
-  ResourceList.addEventListener('click', (event) => {
-    const { target } = event;
-
-    if(target.id == "addRes")
-    {
-      const Res = moddle.create('bpmn:Resource')
-      console.log(Res)
-      Res.id = "RS_new"
-      Res.name = "Новый"
-      let resParams = []
-      let resParam = moddle.create("bpmn:ResourceParameter")
-      resParam.id = "RS_new_P_1"
-      resParam.name = "name"
-      resParams.push(resParam)
-
-      resParam = moddle.create("bpmn:ResourceParameter")
-      resParam.id = "RS_new_P_2"
-      resParam.name = "threads"
-      resParams.push(resParam)
-      
-      resParam = moddle.create("bpmn:ResourceParameter")
-      resParam.id = "RS_new_P_3"
-      resParam.name = "productivity"
-      resParams.push(resParam)
-
-      Res.resourceParameters = resParams
-
-      console.log(Res)
-      bpmnModeler._definitions.rootElements.push(Res)
-      UppdateResourceList()
-      return
-    }
-    if(target.className == "resource"){
-      RootElement.forEach(element => {
-        if(element.id == target.id)
-        {
-          console.log("Найден элемент", element)
-          CreateResourceEditWindow(element)
-          
-        }
-      });
-    }
+    qualityAssuranceEl.classList.add('hidden')
+    /*
+    analysisDetails = undefined
+    ltsmProps = undefined*/
   });
 
-
-  function CreateResourceEditWindow(element){
-    ResourceEdit.innerHTML = ""
-    let resourceedit = document.createElement("div")
-    resourceedit.className = ""
-    resourceedit.id = element.id
-
-
-    let divL = document.createElement("div")
-    let pL = document.createElement("p") 
-    pL.innerHTML = "Ресурс: " + element.name
-    divL.append(pL)
-    pL = document.createElement("p") 
-    pL.innerHTML = "id: " + element.id
-    divL.append(pL)
-    resourceedit.append(divL)
-
-
-    divL = document.createElement("div")
-    console.log("hhh")
-    element.resourceParameters.forEach(param => {
-      console.log(param)
-      let param_div = document.createElement("div")
-      let input_param = document.createElement("input")
-      input_param.id = "id_param"
-      input_param.value = param.id
-      param_div.append(input_param)
-
-      input_param = document.createElement("input")
-      input_param.id = "name_param"
-      input_param.value = param.name
-      param_div.append(input_param)
-
-      divL.append(param_div)
-    });
-    resourceedit.append(divL)
-    ResourceEdit.append(resourceedit)
-  }
-
-
-  /*
   // close quality assurance if user presses escape
   formEl.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       qualityAssuranceEl.classList.add('hidden');
     }
-  });*/
+  });
+
+  // validate suitability score if user inputs value
+  //suitabilityScoreEl.addEventListener('input', validate);
+  /*
+  container
+      .removeClass('with-error')
+      .addClass('with-diagram');*/
 
   bpmnModeler.get('minimap').open();
 
@@ -252,7 +212,7 @@ bpmnModeler.importXML(file).then(() => {
   console.error(err);
 });
 }
-/*
+
 function getExtensionElement(element, type) {
   if (!element.extensionElements) {
     return 0;
@@ -260,4 +220,4 @@ function getExtensionElement(element, type) {
   return element.extensionElements.values.filter((extensionElement) => {
     return extensionElement.$instanceOf(type);
   })[0];
-}*/
+}

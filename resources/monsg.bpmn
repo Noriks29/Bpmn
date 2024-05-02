@@ -599,7 +599,7 @@
       <outgoing>_83</outgoing>
       <outgoing>_70</outgoing>
     </exclusiveGateway>
-    <exclusiveGateway id="_65" name="Exclusive Gateway" gatewayDirection="Converging">
+    <parallelGateway id="_65" name="parallelGateway " gatewayDirection="Converging">
       <extensionElements>
         <yaoqiang:style noLabel="1" />
       </extensionElements>
@@ -607,7 +607,7 @@
       <incoming>_135</incoming>
       <incoming>_75</incoming>
       <outgoing>_67</outgoing>
-    </exclusiveGateway>
+    </parallelGateway>
     <sequenceFlow id="_132" sourceRef="_130" targetRef="_88" />
     <sequenceFlow id="_131" sourceRef="_78" targetRef="_130" />
     <task id="_130" name="22-23">
