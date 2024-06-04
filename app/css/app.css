@@ -143,3 +143,16 @@
   background-color: #efefef;
   padding: 2px;
 }
+#resource-params div{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 5px;
+}
+
+#resource-params div div{
+  margin: 4px;
+}
+#resource-param-0{
+  display: none;
+}

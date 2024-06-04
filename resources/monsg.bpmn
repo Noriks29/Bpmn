@@ -653,6 +653,9 @@
     <sequenceFlow id="_75" sourceRef="_54" targetRef="_65" />
   </process>
   <resource id="RS_1" name="КА">
+    <extensionElements>
+      <ltsm:props stream="10000000" volume="7" />
+    </extensionElements>
     <resourceParameter id="RS_1_P_1" name="threads" />
     <resourceParameter id="RS_1_P_2" name="productivity" />
     <resourceParameter id="RS_1_P_3" name="name" />

@@ -26,6 +26,7 @@ const buttonShowResource = document.getElementById('resource_panel');
 
 const ResourceList = document.getElementById("resource-list");
 const ResourceEdit = document.getElementById("resource-edit");
+const ResourceParamsDiv = document.getElementById("resource-params");
 
 const HIGH_PRIORITY = 1500; // повышаем приоритет что бы система была важнее дефолтной(1000)
 
@@ -36,7 +37,6 @@ const containerEl = document.getElementById('container'), //тут всё ото
 //скрываем форму редактирования обьекта при клике вне фрэйма
 window.addEventListener('click', (event) => {
   const { target } = event;
-  console.log(target)
   if (target === ResourceWindow || target === buttonShowResource || ResourceWindow.contains(target) || target.id == "addRes") {
     return;
   }
@@ -147,19 +147,9 @@ bpmnModeler.importXML(file).then(() => {
     resource.innerHTML = "Добавить ресурс"
     ResourceList.append(resource)
   }
-  
-  buttonShowResource.addEventListener('click', async function() {
-    //console.log(bpmnModeler._definitions.rootElements)
-    UppdateResourceList()
-    ResourceWindow.classList.remove('hidden');
-  })
 
-  ResourceList.addEventListener('click', (event) => {
-    const { target } = event;
-
-    if(target.id == "addRes")
-    {
-      const Res = moddle.create('bpmn:Resource')
+  function CreateResource(){
+    const Res = moddle.create('bpmn:Resource')
       console.log(Res)
       Res.id = "RS_new"
       Res.name = "Новый"
@@ -183,6 +173,20 @@ bpmnModeler.importXML(file).then(() => {
 
       console.log(Res)
       bpmnModeler._definitions.rootElements.push(Res)
+  }
+  
+  buttonShowResource.addEventListener('click', async function() {
+    //console.log(bpmnModeler._definitions.rootElements)
+    UppdateResourceList()
+    ResourceWindow.classList.remove('hidden');
+  })
+
+  ResourceList.addEventListener('click', (event) => {
+    const { target } = event;
+
+    if(target.id == "addRes")
+    {
+      CreateResource()
       UppdateResourceList()
       return
     }
@@ -190,7 +194,7 @@ bpmnModeler.importXML(file).then(() => {
       RootElement.forEach(element => {
         if(element.id == target.id)
         {
-          console.log("Найден элемент", element)
+          //console.log("Найден элемент", element)
           CreateResourceEditWindow(element)
           
         }
@@ -200,42 +204,45 @@ bpmnModeler.importXML(file).then(() => {
 
 
   function CreateResourceEditWindow(element){
-    ResourceEdit.innerHTML = ""
-    let resourceedit = document.createElement("div")
-    resourceedit.className = ""
-    resourceedit.id = element.id
+    document.getElementById("res_name").value = element.name
+    document.getElementById("res_id").value = element.id
+    let divclone = document.getElementById("resource-param-0").cloneNode(true)
+    document.getElementById("resource-params").innerHTML = ""
 
-
-    let divL = document.createElement("div")
-    let pL = document.createElement("p") 
-    pL.innerHTML = "Ресурс: " + element.name
-    divL.append(pL)
-    pL = document.createElement("p") 
-    pL.innerHTML = "id: " + element.id
-    divL.append(pL)
-    resourceedit.append(divL)
-
-
-    divL = document.createElement("div")
-    console.log("hhh")
     element.resourceParameters.forEach(param => {
-      console.log(param)
-      let param_div = document.createElement("div")
-      let input_param = document.createElement("input")
-      input_param.id = "id_param"
-      input_param.value = param.id
-      param_div.append(input_param)
+      let div = divclone.cloneNode(true)
+      div.id = param.id
+      div.children[0].children[0].innerHTML = param.id
+      div.children[1].children[0].value = param.name
+      div.children[2].children[0].value = param.value || 0
 
-      input_param = document.createElement("input")
-      input_param.id = "name_param"
-      input_param.value = param.name
-      param_div.append(input_param)
-
-      divL.append(param_div)
+      document.getElementById("resource-params").append(div)
     });
-    resourceedit.append(divL)
-    ResourceEdit.append(resourceedit)
   }
+
+  ResourceParamsDiv.addEventListener('change', async function(event) {
+
+    let idres = document.getElementById("res_id").value
+    let value = event.target.value
+    let target_id = event.target.id
+    let id_res_param = event.target.parentElement.parentElement.id
+    //console.log(idres, value, id_res_param, target_id, RootElement)
+    RootElement.forEach(element => {
+      if(element.$type === "bpmn:Resource" && element.id == idres){
+        element.resourceParameters.forEach(element_param => {
+          if(element_param.id == id_res_param)
+            {
+              if(target_id == "res-param-name")
+                element_param.name = value
+              else if(target_id == "res-param-value")
+                element_param.parametresds = value
+              //console.log(element)
+            }
+        });
+      }
+    });
+    console.log(RootElement)
+  })
 
 
   /*
