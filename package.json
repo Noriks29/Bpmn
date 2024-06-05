@@ -5,9 +5,9 @@
   "scripts": {
     "all": "run-s lint build",
     "build": "webpack --mode production",
-    "build:watch": "webpack --watch",
-    "dev": "run-p build:watch serve",
-    "serve": "sirv public --dev --host",
+    "build:watch": "webpack-dev-server",
+    "dev": "run-p build:watch",
+    "serve": "sirv public --dev",
     "lint": "eslint .",
     "start": "run-s build serve"
   },
