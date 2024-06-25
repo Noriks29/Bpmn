@@ -25,8 +25,9 @@ const buttonSaveXML = document.querySelector('.button_save');
 const buttonShowResource = document.getElementById('resource_panel');
 
 const ResourceList = document.getElementById("resource-list");
-const ResourceEdit = document.getElementById("resource-edit");
+const ResourceAddSV = document.getElementById("res_add_StrVol_Button");
 const ResourceParamsDiv = document.getElementById("resource-params");
+
 
 const HIGH_PRIORITY = 1500; // повышаем приоритет что бы система была важнее дефолтной(1000)
 
@@ -85,18 +86,38 @@ buttonImportXML.addEventListener('change', function(file_input) {
   }
 })
 
-// save file
+// save file button
+const saveWindow = document.getElementById('save-window');
 
+// Обработчик клика по кнопке "Сохранить"
 buttonSaveXML.addEventListener('click', async function() {
-  console.log("click!!");
   try {
     const { xml } = await bpmnModeler.saveXML();
     console.log(xml);
+    // Создаем Blob объект с типом text/xml
+    const blob = new Blob([xml], { type: 'application/bpmn' });
+    console.log(blob, "nen")
+    // Создаем ссылку для скачивания файла
+    const url = URL.createObjectURL(blob);
+    const downloadLink = document.getElementById('downloadLink');
+    downloadLink.href = url;
+    // Показываем модальное окно
+    saveWindow.classList.add('show');
+
   } catch (err) {
     console.log(err);
   }
-})
-
+});
+// Закрытие модального окна при клике на фон
+saveWindow.addEventListener('click', function(event) {
+  if (event.target === saveWindow) {
+    saveWindow.classList.remove('show');
+  }
+});
+// Закрытие модального окна при клике на кнопку внутри модального окна
+document.getElementById('downloadLink').addEventListener('click', function() {
+  saveWindow.classList.remove('show');
+});
 
 
 // import XML
@@ -127,7 +148,7 @@ bpmnModeler.importXML(file).then(() => {
     console.log(element)
   });
 
-  function UppdateResourceList(){
+  function UppdateResourceList(){ //создание списка ресурсов
     console.log("ttt")
     ResourceList.innerHTML = ''
     RootElement.forEach(element => {
@@ -151,7 +172,6 @@ bpmnModeler.importXML(file).then(() => {
 
   function CreateResource(){
     const Res = moddle.create('bpmn:Resource') // создаём обьект ресурс
-      //console.log(Res) 
       Res.id = "RS_new" // стандартное id ресурса
       Res.name = "Новый" // стандартное имя ресурса
       let resParams = [] // массив параметров
@@ -171,15 +191,6 @@ bpmnModeler.importXML(file).then(() => {
       resParams.push(resParam)
 
       Res.resourceParameters = resParams // добавляем параметры
-
-      let resExtensionElements = moddle.create("bpmn:ExtensionElements") // создаём ExtensionElements
-      let LTSMprops = moddle.create("ltsm:props")
-      LTSMprops.stream = 10000
-      LTSMprops.volume = 7
-      resExtensionElements.values = []
-      resExtensionElements.values.push(LTSMprops)
-      Res.extensionElements = resExtensionElements
-
       console.log(Res, JSON.stringify(Res))
       bpmnModeler._definitions.rootElements.push(Res)
   }
@@ -223,15 +234,39 @@ bpmnModeler.importXML(file).then(() => {
       let div = divclone.cloneNode(true)
       div.id = param.id
       div.children[0].children[0].innerHTML = param.id
-      div.children[1].children[0].value = param.name
-      div.children[2].children[0].value = param.parametresds || 0
+      div.children[1].children[0].innerHTML = param.name
+      div.children[2].children[0].value = param.value || ""
 
       document.getElementById("resource-params").append(div)
     });
+
+    let stream = undefined
+    let volume = undefined
+    try {
+      element.extensionElements.values.forEach(prop => { 
+        if(prop.$type == "ltsm:props" && prop.hasOwnProperty("stream") && prop.hasOwnProperty("volume")){
+          stream = prop.stream
+          volume = prop.volume
+        }
+      })
+    } catch (error) {
+      //pu pu pu
+    }
+    if(stream != undefined && volume != undefined)
+    {
+      ResourceAddSV.style.display = "none"
+      const propsDiv = document.getElementById("res-StrVol")
+      propsDiv.style.display = "block"
+      propsDiv.children[0].children[1].value = stream
+      propsDiv.children[1].children[1].value = volume
+    }
+    else{
+      ResourceAddSV.style.display = "block"
+      document.getElementById("res-StrVol").style.display = "none"
+    }
   }
 
   ResourceParamsDiv.addEventListener('change', async function(event) {
-
     let idres = document.getElementById("res_id").value
     let value = event.target.value
     let target_id = event.target.id
@@ -242,16 +277,63 @@ bpmnModeler.importXML(file).then(() => {
         element.resourceParameters.forEach(element_param => {
           if(element_param.id == id_res_param)
             {
-              if(target_id == "res-param-name")
-                element_param.name = value
-              else if(target_id == "res-param-value")
-                element_param.parametresds = value
-              //console.log(element)
+              if(target_id == "res-param-value")
+                element_param.value = value
             }
         });
       }
     });
     console.log(RootElement)
+  })
+
+
+  //работа с stream и volume в окне ресурсов 
+  ResourceAddSV.addEventListener('click', async function() {
+    let idres = document.getElementById("res_id").value
+    console.log(idres, RootElement)
+    RootElement.forEach(element => {
+      if(element.$type === "bpmn:Resource" && element.id == idres){
+        if(!element.hasOwnProperty("extensionElements")){
+          console.log("создан ExtensionElements")
+          element.extensionElements = moddle.create("bpmn:ExtensionElements")// создаём ExtensionElements
+          element.extensionElements.values = []
+        }
+        let LTSMprops = moddle.create("ltsm:props")
+        LTSMprops.stream = 1
+        LTSMprops.volume = 1
+        element.extensionElements.values.push(LTSMprops)
+      }
+    });
+  })
+
+  const StreamInputResource = document.getElementById("streamRes")
+  const VolumrInputResource = document.getElementById("volumeRes")
+  StreamInputResource.addEventListener('change', async function(event) {
+    let idres = await document.getElementById("res_id").value
+    RootElement.forEach(element => {
+      if(element.$type === "bpmn:Resource" && element.id == idres){
+        console.log(element.extensionElements.values)
+        element.extensionElements.values.forEach(props => {
+          if(props.$type == "ltsm:props"){
+            props.stream = Number(event.target.value)
+          }
+        })
+      }
+    });
+  })
+
+  VolumrInputResource.addEventListener('change', async function(event) {
+    let idres = await document.getElementById("res_id").value
+    RootElement.forEach(element => {
+      if(element.$type === "bpmn:Resource" && element.id == idres){
+        console.log(element.extensionElements.values)
+        element.extensionElements.values.forEach(props => {
+          if(props.$type == "ltsm:props"){
+            props.volume = Number(event.target.value)
+          }
+        })
+      }
+    });
   })
 
   bpmnModeler.get('minimap').open();

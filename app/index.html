@@ -23,31 +23,7 @@
   <div id="container"></div>
   </div>
   <div id="properties"></div>
-  <!-- div quality-assurance Отвечает за окно оверлея для редактирования параметров -->
-  <div id="quality-assurance" class="panel hidden">  
-    <form id="form">
-      <p>
-      <label>
-        <input id="suitability-score" type="checkbox">
-        Добавлено в маршрут
-      </label>
-      </p>
-      <br />
-      <p id="warning" class="hidden">
-        Stream или Volume должны быть числами
-      </p>
-      <br />
-      <p>
-        <b>Последние изменения</b>
-      </p>
-      <br />
-      <p id="last-checked">
-        -
-      </p>
-      <br />
-      <input id="okay" type="submit" value="Сохранить">
-    </form>
-  </div>  
+
   <div id="hint" class="panel">Нахмите <b>правую кнопку мыши</b> чтобы редактировать свойства.
   </div>
 </div>
@@ -64,25 +40,36 @@
         <p>Название ресурса <input id="res_name" type="text" value="Не выбран"></p>
         <p>id: <input type="text" id="res_id" value="none"> </p>
       </div>
-      <div id="jsonObj">
-
-      </div>
+      <div id="jsonObj"></div>
       <div id="resource-param-0">
         <div>
           <p id="res-param-id"></p>
         </div>
         <div>
-          <input id="res-param-name" type="text">
+          <p id="res-param-name"></p>
         </div>
         <div>
           <input id="res-param-value" type="text">
         </div>
       </div>
-      <div id="resource-params">
+      <div id="resource-params"></div>
+
+      <div id="resource-update">
+        <button id="res_add_StrVol_Button">Добавить Stream и Volume</button>
+        <div id="res-StrVol" style="display: none;">
+          <p><label for="streamRes">stream</label><input name="stream" id="streamRes" type="number"></p>
+          <p><label for="volumeRes">volume</label><input name="volume" id="volumeRes" type="number"></p>
+        </div>
       </div>
 
     </div>
   </div>
+  </div>
+</div>
+
+<div id="save-window" class="modal">
+  <div class="save-content">
+    <p>Файл готов к загрузке. <a id="downloadLink" href="#" download="file.bpmn">Скачать файл</a></p>
   </div>
 </div>
   <script src="app.js"></script> <!-- подключаем управляющий скрипт-->

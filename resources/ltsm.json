@@ -27,7 +27,18 @@
           "name": "penalty_angle",
           "isAttr": true,
           "type": "Integer"
+        },
+        {
+          "name": "availability_time",
+          "isAttr": true,
+          "type": "Integer"
+        },
+        {
+          "name": "availability_value",
+          "isAttr": true,
+          "type": "Integer"
         }
+
       ]
     }
   ],
