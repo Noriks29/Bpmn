@@ -128,6 +128,7 @@ bpmnModeler.importXML(file).then(() => {
   });
 
   function UppdateResourceList(){
+    console.log("ttt")
     ResourceList.innerHTML = ''
     RootElement.forEach(element => {
       if(element.$type === "bpmn:Resource")
@@ -149,11 +150,11 @@ bpmnModeler.importXML(file).then(() => {
   }
 
   function CreateResource(){
-    const Res = moddle.create('bpmn:Resource')
-      console.log(Res)
-      Res.id = "RS_new"
-      Res.name = "Новый"
-      let resParams = []
+    const Res = moddle.create('bpmn:Resource') // создаём обьект ресурс
+      //console.log(Res) 
+      Res.id = "RS_new" // стандартное id ресурса
+      Res.name = "Новый" // стандартное имя ресурса
+      let resParams = [] // массив параметров
       let resParam = moddle.create("bpmn:ResourceParameter")
       resParam.id = "RS_new_P_1"
       resParam.name = "name"
@@ -169,9 +170,17 @@ bpmnModeler.importXML(file).then(() => {
       resParam.name = "productivity"
       resParams.push(resParam)
 
-      Res.resourceParameters = resParams
+      Res.resourceParameters = resParams // добавляем параметры
 
-      console.log(Res)
+      let resExtensionElements = moddle.create("bpmn:ExtensionElements") // создаём ExtensionElements
+      let LTSMprops = moddle.create("ltsm:props")
+      LTSMprops.stream = 10000
+      LTSMprops.volume = 7
+      resExtensionElements.values = []
+      resExtensionElements.values.push(LTSMprops)
+      Res.extensionElements = resExtensionElements
+
+      console.log(Res, JSON.stringify(Res))
       bpmnModeler._definitions.rootElements.push(Res)
   }
   
@@ -208,13 +217,14 @@ bpmnModeler.importXML(file).then(() => {
     document.getElementById("res_id").value = element.id
     let divclone = document.getElementById("resource-param-0").cloneNode(true)
     document.getElementById("resource-params").innerHTML = ""
-
+    document.getElementById("jsonObj").innerHTML = JSON.stringify(element)
+    console.log(element)
     element.resourceParameters.forEach(param => {
       let div = divclone.cloneNode(true)
       div.id = param.id
       div.children[0].children[0].innerHTML = param.id
       div.children[1].children[0].value = param.name
-      div.children[2].children[0].value = param.value || 0
+      div.children[2].children[0].value = param.parametresds || 0
 
       document.getElementById("resource-params").append(div)
     });
@@ -226,7 +236,7 @@ bpmnModeler.importXML(file).then(() => {
     let value = event.target.value
     let target_id = event.target.id
     let id_res_param = event.target.parentElement.parentElement.id
-    //console.log(idres, value, id_res_param, target_id, RootElement)
+    console.log(idres, value, id_res_param, target_id, RootElement)
     RootElement.forEach(element => {
       if(element.$type === "bpmn:Resource" && element.id == idres){
         element.resourceParameters.forEach(element_param => {
@@ -244,27 +254,9 @@ bpmnModeler.importXML(file).then(() => {
     console.log(RootElement)
   })
 
-
-  /*
-  // close quality assurance if user presses escape
-  formEl.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      qualityAssuranceEl.classList.add('hidden');
-    }
-  });*/
-
   bpmnModeler.get('minimap').open();
 
 }).catch((err) => {
   console.error(err);
 });
 }
-/*
-function getExtensionElement(element, type) {
-  if (!element.extensionElements) {
-    return 0;
-  }
-  return element.extensionElements.values.filter((extensionElement) => {
-    return extensionElement.$instanceOf(type);
-  })[0];
-}*/
