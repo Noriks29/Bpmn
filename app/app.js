@@ -22,6 +22,7 @@ import ltsmExtension from '../resources/ltsm'; // подгрузка касто�
 
 import resourcePropertiesProvider from './custom';
 import ltsmPropertiesProvider from './custom';
+import { createElement } from '@bpmn-io/properties-panel/preact';
 
 const buttonSaveXML = document.querySelector('.button_save');
 const buttonShowResource = document.getElementById('resource_panel');
@@ -136,7 +137,15 @@ bpmnModeler.importXML(file).then(() => {
   let businessObject,
       element;
 
-  
+  let panel = document.getElementsByClassName("bio-properties-panel-scroll-container")[0] //Добавление кнопки на панель
+  let buttonDiv = document.createElement("button")
+  buttonDiv.innerHTML = 'Другое'
+  buttonDiv.id = "button-showViewWindow"
+  panel.append(buttonDiv)
+  const Button_infoTask = document.getElementById("button-showViewWindow")
+  Button_infoTask.style.display = "none"
+
+
   bpmnModeler.on('element.contextmenu', HIGH_PRIORITY, (event) => { //нужно только для информации по обьекту правой кнопкой мыши( вермено )
     event.originalEvent.preventDefault();
     event.originalEvent.stopPropagation();
@@ -151,6 +160,7 @@ bpmnModeler.importXML(file).then(() => {
     console.log(element)
   });
 
+  const TaskWindow = document.getElementById('task-window');
   bpmnModeler.on('element.click', HIGH_PRIORITY, (event) => { //нажатие левой кнопкой по таску
     event.originalEvent.preventDefault();
     event.originalEvent.stopPropagation();
@@ -161,17 +171,74 @@ bpmnModeler.importXML(file).then(() => {
       return;
     }
     businessObject = getBusinessObject(element)
+    
     if(businessObject.$type == "bpmn:Task"){
-      try {
-        businessObject.extensionElements.values.forEach(props => {
-          console.log(props)
-        })
-      } catch (error) {
-        
-      }
+      Button_infoTask.style.display = "block"
+    }else{
+      Button_infoTask.style.display = "none"
     }
     console.log(element)
   });
+
+  TaskWindow.addEventListener('click', function(event) {
+    if (event.target === TaskWindow) {
+      TaskWindow.classList.remove('show');
+    }
+  });
+  Button_infoTask.addEventListener("click", function(event){
+    TaskWindow.classList.add('show');
+    console.log(businessObject)
+    let arrtime = []
+    let arrbase = []
+    let yAxis = []
+    let hoverText = []
+    let lasttime = 0
+    try{
+      businessObject.extensionElements.values.forEach(props => {
+      if(props.$type == "ltsm:props" && props.hasOwnProperty("availability_time") && props.hasOwnProperty("availability_value")){
+        if(props.availability_value == 1){
+          arrbase.push(props.availability_time)
+          yAxis.push(0)
+          lasttime = props.availability_time
+        }
+        else{
+          if(arrbase.length !== 0){
+            arrtime.push(props.availability_time - lasttime)
+          }
+        }
+      }
+    })}
+    catch (error){
+      console.log(error)
+    }
+    if(arrbase.length > 0){
+
+      
+      if(arrbase.length > arrtime.length){
+        arrtime.push(5)
+      }
+      for (let index = 0; index < arrbase.length; index++) {
+        hoverText.push(String(arrbase[index]) + " to " + String(arrbase[index] + arrtime[index]))
+        console.log(String(arrbase[index]) + " to " + String(arrbase[index] + arrtime[index]))
+      }
+
+      console.log(arrtime, arrbase)
+
+      let grapfDiv = document.getElementById('task-ViewGraph')
+      grapfDiv.innerHTML = ''
+      Plotly.newPlot(grapfDiv, [{
+        type: 'bar',
+        y: yAxis,
+        x: arrtime,
+        orientation: 'h',
+        text: hoverText,
+        base: arrbase
+      },])
+    }
+    else{
+      document.getElementById('task-ViewGraph').innerHTML = ''
+    }
+  })
 
 
   function UppdateResourceList(){ //создание списка ресурсов
