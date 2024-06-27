@@ -61,6 +61,8 @@
           <p><label for="volumeRes">volume</label><input name="volume" id="volumeRes" type="number"></p>
         </div>
       </div>
+      <div id="resource-ViewGraph" style="width:600px;height:250px;">
+      </div>
 
     </div>
   </div>
@@ -70,6 +72,12 @@
 <div id="save-window" class="modal">
   <div class="save-content">
     <p>Файл готов к загрузке. <a id="downloadLink" href="#" download="file.bpmn">Скачать файл</a></p>
+  </div>
+</div>
+<div id="task-window" class="modal">
+  <div id="class_modal">
+    <p>График окон видимости задачи</p>
+    <div id="task-ViewGraph"></div>
   </div>
 </div>
   <script src="app.js"></script> <!-- подключаем управляющий скрипт-->

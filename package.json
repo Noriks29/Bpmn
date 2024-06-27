@@ -50,6 +50,7 @@
     "bpmn-js-properties-panel": "^5.7.0",
     "diagram-js-minimap": "^4.1.0",
     "jquery": "^3.5.1",
-    "min-dash": "^4.1.1"
+    "min-dash": "^4.1.1",
+    "plotly.js-dist-min": "^2.33.0"
   }
 }

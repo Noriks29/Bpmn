@@ -9,6 +9,8 @@ import {
 
 import minimapModule from 'diagram-js-minimap';
 
+import Plotly from 'plotly.js-dist-min'
+
 
 import diagramXML2 from '../resources/monsg.bpmn'; // путь к заготовке схемы
 import diagramXML from '../resources/monsg_test.bpmn'; // путь к заготовке схемы
@@ -134,7 +136,8 @@ bpmnModeler.importXML(file).then(() => {
   let businessObject,
       element;
 
-  bpmnModeler.on('element.contextmenu', HIGH_PRIORITY, (event) => {
+  
+  bpmnModeler.on('element.contextmenu', HIGH_PRIORITY, (event) => { //нужно только для информации по обьекту правой кнопкой мыши( вермено )
     event.originalEvent.preventDefault();
     event.originalEvent.stopPropagation();
     ({ element } = event);
@@ -147,6 +150,29 @@ bpmnModeler.importXML(file).then(() => {
 
     console.log(element)
   });
+
+  bpmnModeler.on('element.click', HIGH_PRIORITY, (event) => { //нажатие левой кнопкой по таску
+    event.originalEvent.preventDefault();
+    event.originalEvent.stopPropagation();
+    ({ element } = event);
+    
+    // ignore root element
+    if (!element.parent) {
+      return;
+    }
+    businessObject = getBusinessObject(element)
+    if(businessObject.$type == "bpmn:Task"){
+      try {
+        businessObject.extensionElements.values.forEach(props => {
+          console.log(props)
+        })
+      } catch (error) {
+        
+      }
+    }
+    console.log(element)
+  });
+
 
   function UppdateResourceList(){ //создание списка ресурсов
     console.log("ttt")
@@ -168,6 +194,7 @@ bpmnModeler.importXML(file).then(() => {
     resource.id = "addRes"
     resource.innerHTML = "Добавить ресурс"
     ResourceList.append(resource)
+    console.log(RootElement)
   }
 
   function CreateResource(){
@@ -263,6 +290,54 @@ bpmnModeler.importXML(file).then(() => {
     else{
       ResourceAddSV.style.display = "block"
       document.getElementById("res-StrVol").style.display = "none"
+    }
+    let arrtime = []
+    let arrbase = []
+    let yAxis = []
+    let hoverText = []
+    let lasttime = 0
+    try{
+    element.extensionElements.values.forEach(props => {
+      if(props.$type == "ltsm:props" && props.hasOwnProperty("availability_time") && props.hasOwnProperty("availability_value")){1
+        if(props.availability_value == 1){
+          arrbase.push(props.availability_time)
+          yAxis.push(0)
+          lasttime = props.availability_time
+        }
+        else{
+          arrtime.push(props.availability_time - lasttime)
+        }
+      }
+    })}
+    catch (error){
+      console.log(error)
+    }
+    if(arrbase.length > 0){
+
+      
+      if(arrbase.length > arrtime.length){
+        arrtime.push(5)
+      }
+      for (let index = 0; index < arrbase.length; index++) {
+        hoverText.push(String(arrbase[index]) + " to " + String(arrbase[index] + arrtime[index]))
+        console.log(String(arrbase[index]) + " to " + String(arrbase[index] + arrtime[index]))
+      }
+
+      console.log(arrtime, arrbase)
+
+      let grapfDiv = document.getElementById('resource-ViewGraph')
+      grapfDiv.innerHTML = ''
+      Plotly.newPlot(grapfDiv, [{
+        type: 'bar',
+        y: yAxis,
+        x: arrtime,
+        orientation: 'h',
+        text: hoverText,
+        base: arrbase
+      },])
+    }
+    else{
+      document.getElementById('resource-ViewGraph').innerHTML = ''
     }
   }
 
